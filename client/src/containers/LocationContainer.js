@@ -7,11 +7,12 @@ const LocationContainer = () => {
     const [selectedLocation, setSelectedLocation] = useState({name: "glasgow"});
 
 
+    //this is to be passed to the map component
     const handleSelectLocation = (location) => {
 
         setSelectedLocation(location)
       
-    }
+    };
 
 
 
