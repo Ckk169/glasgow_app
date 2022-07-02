@@ -5,37 +5,23 @@ import '../App.css';
 
 
 
-const LeafletMapContainer = ({ location, handleSelectLocation }) => {
+const LeafletMapContainer = ({locations, showLocation }) => {
 
-    const handleButton = () => {
-        handleSelectLocation(location)
+    const handleButtonClick = (event) => {
+
+        showLocation(event.target.value)
+      
     }
 
-    // # to revisit 
-    // const LocationMarker = () => {
-    //     const [position, setPosition] = useState(null)
-    //     const map = useMapEvents({
-    //         click() {
-    //             map.locate()
-    //         },
-    //         locationfound(e) {
-    //             setPosition(e.latlng)
-    //             map.flyTo(e.latlng, map.getZoom())
-    //         },
-    //     })
 
-    //     return position === null ? null : (
-    //         <Marker position={position}>
-    //             <Popup>You are here</Popup>
-    //         </Marker>
-    //     )
-    // }
 
     return (
 
         <div id='Map' style={{ height: '50%', width: '50%' }}>
 
             <MapContainer
+                locations ={locations}
+                showLocation ={showLocation}
                 id="Map"
                 center={[55.8642, -4.2518]}
                 zoom={12}
@@ -45,21 +31,28 @@ const LeafletMapContainer = ({ location, handleSelectLocation }) => {
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
 
-                <Marker
-                    position={[55.8636, -4.2825]}>
-                    <Popup >
-                    // to link with dummy data
-                        <button onClick={handleButton}>Rotunda</button>
-                    </Popup>
-                </Marker>
+                {locations.map((location)=>{
 
-                <Marker
-                    position={[55.8591, - 4.2581]}>
-                    <Popup>
-                        // to link with dummy data
-                        <button onClick={handleButton}>Grahamston</button>
-                    </Popup>
-                </Marker>
+                    return(
+                        <Marker 
+                         position={[location.gps.lat, location.gps.long]} key={location._id}>
+    
+                        <Popup location={location}>
+                        <button onClick={handleButtonClick} value={location._id}>{location.name}</button>
+                        </Popup>
+                         
+                        </Marker>
+
+                    )
+
+                })}
+               
+
+            
+            
+              
+
+
 
 
 

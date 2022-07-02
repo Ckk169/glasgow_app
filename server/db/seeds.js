@@ -6,7 +6,7 @@ db.locations.insertMany([
         name: "Rotunda",
         gps: {
             lat: 55.8636,
-            long: 4.2825
+            long: -4.2825
         },
         title: {
             markerTitle: "This is the marker title",
@@ -18,7 +18,7 @@ db.locations.insertMany([
         name: "Grahamston",
         gps: {
             lat: 55.8591,
-            long: 4.2581
+            long: -4.2581
         },
         title: {
             markerTitle: "This is the marker title",
@@ -30,7 +30,7 @@ db.locations.insertMany([
         name: "Botanic Gardens Railway Station",
         gps: {
             lat: 55.8797,
-            long: 4.2912
+            long: -4.2912
         },
         title: {
             markerTitle: "This is the marker title",
@@ -42,7 +42,7 @@ db.locations.insertMany([
         name: "Gallery of Modern Art",
         gps: {
             lat: 55.8602,
-            long: 4.2525
+            long: -4.2525
         },
         title: {
             markerTitle: "This is the marker title",
