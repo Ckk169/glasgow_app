@@ -5,11 +5,16 @@ import '../App.css';
 
 
 
-const LeafletMapContainer = ({ location, handleSelectLocation }) => {
 
-    const handleButton = () => {
-        handleSelectLocation(location)
+const LeafletMapContainer = ({locations}) => {
+
+    const handleButton = (event) => {
+        const chosenIndex = event.target.value;
+        const chosenLocation = locations[chosenIndex]
+        handleButtonSelect(chosenLocation)
     }
+
+    
 
     // # to revisit 
     // const LocationMarker = () => {
@@ -33,9 +38,10 @@ const LeafletMapContainer = ({ location, handleSelectLocation }) => {
 
     return (
 
-        <div id='Map' style={{ height: '50%', width: '50%' }}>
 
             <MapContainer
+            key = {index}
+            value = {index}
                 id="Map"
                 center={[55.8642, -4.2518]}
                 zoom={12}
@@ -44,7 +50,7 @@ const LeafletMapContainer = ({ location, handleSelectLocation }) => {
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
-
+                
                 <Marker
                     position={[55.8636, -4.2825]}>
                     <Popup >
@@ -67,7 +73,6 @@ const LeafletMapContainer = ({ location, handleSelectLocation }) => {
 
             </MapContainer>
 
-        </div>
 
     )
 }

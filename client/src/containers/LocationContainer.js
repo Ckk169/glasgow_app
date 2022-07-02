@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import LocationDetail from '../components/LocationDetail';
 import LeafletMapContainer from './LeafletMapContainer';
 import '../App.css';
+import LocationList from '../components/LocationList';
 
 
 const LocationContainer = () => {
@@ -29,7 +30,7 @@ const LocationContainer = () => {
 
 
     //this is to be passed to the map component
-    const handleSelectLocation = (location) => {
+    const handleButtonSelect = (location) => {
 
         setSelectedLocation(location)
 
@@ -39,8 +40,8 @@ const LocationContainer = () => {
 
     return (
         <>
-            <LeafletMapContainer />
-            {selectedLocation ? <LocationDetail location={selectedLocation} /> : null}
+            <LeafletMapContainer/>
+            {/* {selectedLocation ? <LocationDetail location={selectedLocation} /> : null} */}
         </>
     )
 
