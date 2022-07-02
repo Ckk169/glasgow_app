@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import LocationDetail from '../components/LocationDetail';
 import { MapContainer, TileLayer, Marker, Popup} from 'react-leaflet';
 import '../App.css';
+import LocationList from '../components/LocationList';
 
 
 const LocationContainer = () => {
@@ -32,9 +33,11 @@ const LocationContainer = () => {
 
 
     //this is to be passed to the map component
+
     const handleSelectLocation = (event) => {
         const chosenIndex = event.target.value;
         const chosenLocation = locations[chosenIndex];
+
 
         setSelectedLocation(chosenLocation)
 
@@ -44,6 +47,8 @@ const LocationContainer = () => {
 
     return (
         <>
+
+
         <div id='Map' style={{ height: '50%', width: '50%' }}>
 
         <MapContainer locations={locations}
@@ -81,6 +86,7 @@ const LocationContainer = () => {
     
     </>
     
+
     )
 
 }
