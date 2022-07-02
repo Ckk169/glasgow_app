@@ -1,5 +1,8 @@
-import {useState} from 'react';
+import React, { useState } from 'react';
 import LocationDetail from '../components/LocationDetail';
+import LeafletMapContainer from './LeafletMapContainer';
+import '../App.css';
+
 
 const LocationContainer = () => {
 
@@ -29,17 +32,18 @@ const LocationContainer = () => {
     const handleSelectLocation = (location) => {
 
         setSelectedLocation(location)
-      
+
     };
 
 
 
-    return(
+    return (
         <>
-            {selectedLocation ? <LocationDetail location = {selectedLocation}/> : null }
+            <LeafletMapContainer />
+            {selectedLocation ? <LocationDetail location={selectedLocation} /> : null}
         </>
     )
-  
+
 }
 
 export default LocationContainer;
