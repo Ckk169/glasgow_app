@@ -46,6 +46,8 @@ const LeafletMapContainer = ({locations, showLocation }) => {
                
             </MapContainer>
 
+            </div>
+
 
 
 

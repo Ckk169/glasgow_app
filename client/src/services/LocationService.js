@@ -1,4 +1,4 @@
-const baseURL = 'http://localhost:9000/api/locations';
+const baseURL = 'http://localhost:9000/api/locations/';
 
 const LocationService = {
 
@@ -7,8 +7,8 @@ const LocationService = {
         .then(res => res.json());
     },
 
-    showLocation (location){
-        return fetch(baseURL + location._id)
+    showSelectedLocation(id){
+        return fetch(baseURL + id)
         .then(res => res.json());
 
 

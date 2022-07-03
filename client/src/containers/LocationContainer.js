@@ -22,10 +22,10 @@ const LocationContainer = () => {
 
   
     const showLocation = (locationId) => {
+
     
-    LocationService.showLocation(locationId)
-    .then(selectedLocation => setSelectedLocation(selectedLocation))
-    console.log(selectedLocation)
+    LocationService.showSelectedLocation(locationId)
+    .then(location => setSelectedLocation(location))
 
     }
 
