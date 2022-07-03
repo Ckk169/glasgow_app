@@ -7,14 +7,11 @@ import '../App.css';
 const LeafletMapContainer = ({locations, showLocation }) => {
 
     const handleButtonClick = (event) => {
-
         showLocation(event.target.value)
-      
     }
 
     return (
       
-       <div id='Map' style={{ height: '50%', width: '50%' }}>
 
             <MapContainer
                 locations ={locations}

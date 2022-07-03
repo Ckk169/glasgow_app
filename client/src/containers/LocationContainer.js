@@ -9,37 +9,31 @@ const LocationContainer = () => {
 
 
     const [locations, setLocations] = useState([]);
-    
-
     const [selectedLocation, setSelectedLocation] = useState(null);
 
     useEffect(() => {
         LocationService.getLocations()
-        .then(locations => setLocations(locations))
- 
+            .then(locations => setLocations(locations))
+
     }, [])
 
 
-  
+
     const showLocation = (locationId) => {
-    
-    LocationService.showLocation(locationId)
-    .then(selectedLocation => setSelectedLocation(selectedLocation))
-    console.log(selectedLocation)
 
+        LocationService.showLocation(locationId)
+            .then(selectedLocation => setSelectedLocation(selectedLocation))
+        
     }
-
-
 
 
     return (
         <>
 
-            <LeafletMapContainer locations= {locations} showLocation = {showLocation} />
+            <LeafletMapContainer locations={locations} showLocation={showLocation} />
             {selectedLocation ? <LocationDetail location={selectedLocation} /> : null}
-    
-    </>
-    
+
+        </>
 
     )
 
