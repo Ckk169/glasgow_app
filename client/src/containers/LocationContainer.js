@@ -1,45 +1,48 @@
-import {useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import LocationDetail from '../components/LocationDetail';
+import LeafletMapContainer from './LeafletMapContainer';
+import LocationService from '../services/LocationService';
+import '../App.css';
+
 
 const LocationContainer = () => {
 
-    const [locations, setLocations] = useState([
-        {
-            name: "Rotunda",
-            gps: {
-                lat: 55.8636,
-                long: 4.2825
-            },
-            info: "Some amazing text goes here"
-        },
-        {
-            name: "Grahamston",
-            gps: {
-                lat: 55.8591,
-                long: 4.2581
-            },
-            info: "Some crap text goes here"
-        },
-    ]);
+
+    const [locations, setLocations] = useState([]);
+    
 
     const [selectedLocation, setSelectedLocation] = useState(null);
 
-
-    //this is to be passed to the map component
-    const handleSelectLocation = (location) => {
-
-        setSelectedLocation(location)
-      
-    };
+    useEffect(() => {
+        LocationService.getLocations()
+        .then(locations => setLocations(locations))
+ 
+    }, [])
 
 
-
-    return(
-        <>
-            {selectedLocation ? <LocationDetail location = {selectedLocation}/> : null }
-        </>
-    )
   
+    const showLocation = (locationId) => {
+
+    
+    LocationService.showSelectedLocation(locationId)
+    .then(location => setSelectedLocation(location))
+
+    }
+
+
+
+
+    return (
+        <>
+
+            <LeafletMapContainer locations= {locations} showLocation = {showLocation} />
+            {selectedLocation ? <LocationDetail location={selectedLocation} /> : null}
+    
+    </>
+    
+
+    )
+
 }
 
 export default LocationContainer;
