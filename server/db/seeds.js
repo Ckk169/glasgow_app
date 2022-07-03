@@ -37,6 +37,7 @@ db.locations.insertMany([
             locationDetail: "This is the Location Detail title"
         },
         info: "Botanics text goes here"
+        
     },
     {
         name: "Gallery of Modern Art",
