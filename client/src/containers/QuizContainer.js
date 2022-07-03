@@ -40,20 +40,44 @@ const QuizContainer = () => {
         ]}
     ])
 
+    const [showScore, setShowScore] =useState(false)
+
     const [currentQuestion, SetCurrentQuestion] = useState(0);
 
-    const handleNextButtonClick = (question) => {
-    
-    
+    const [score, setScore] = useState(0)
+
+
+//this handles the next question button change
+    const handleNextButtonClick = (question) => { 
+
+        if (question < questions.length){
         SetCurrentQuestion(question)
+        } else {
+            setShowScore(true)
+        }
       
     }
 
+    //this handles selecting an answer and updating the users' score
+
+    const updateScore = (answer) => {
+
+        if (answer == true){
+            setScore(score + 1)
+        } 
+        
+      
+    }
+    
+    console.log("i am the score:", score)
+
+
     return(
+        <>
+        {showScore ? (<h1> You scored {score} out of {questions.length}</h1>):
+        <QuizQuestion currentQuestion={currentQuestion} questions={questions} handleNextButtonClick= {handleNextButtonClick} updateScore={updateScore}/>}
 
-        <QuizQuestion currentQuestion={currentQuestion} questions={questions} handleNextButtonClick= {handleNextButtonClick}/>
-
-
+        </>
 
     )
   

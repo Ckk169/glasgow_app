@@ -1,10 +1,10 @@
 import QuizAnswer from "./QuizAnswers"
 
-const QuizQuestion = ({currentQuestion, questions, handleNextButtonClick}) => {
+const QuizQuestion = ({currentQuestion, questions, handleNextButtonClick, updateScore}) => {
 
     const onButtonClick = (event) => {
         handleNextButtonClick(event.target.value)
-        console.log(event.target.value)
+        
       
     }
 
@@ -13,10 +13,10 @@ const QuizQuestion = ({currentQuestion, questions, handleNextButtonClick}) => {
     return (
         <div>
              <span>Question {currentQuestion}/{questions.length}</span>
-             {console.log(currentQuestion)}
+             
              <h3>{questions[currentQuestion].question}</h3>
-             <QuizAnswer answers={questions[currentQuestion].answers} />
-             <button onClick={onButtonClick} value={currentQuestion + 1}>Next Question</button>
+             <QuizAnswer answers={questions[currentQuestion].answers} updateScore={updateScore} />
+             <button onClick={onButtonClick} value={currentQuestion +1}>Next Question</button>
 
              
             

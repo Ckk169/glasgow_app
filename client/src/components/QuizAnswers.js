@@ -1,10 +1,18 @@
 
-const QuizAnswer = ({answers}) => {
+const QuizAnswer = ({answers, updateScore}) => {
+
+    const onAnswerClick = (value) => {
+        updateScore(value)
+       
+      
+    }
 
     const answerNodes = answers.map((answer, index) => {
+
+    
         return(
             <>
-                <button value ={index}>{answer.option}</button>
+                <button onClick={()=>onAnswerClick(answer.value)} key={index} value ={answer.value}>{answer.option}</button>
                
             </>
         )
