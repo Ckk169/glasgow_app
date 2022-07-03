@@ -2,7 +2,7 @@ import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup} from 'react-leaflet';
 import '../App.css';
 
-const LeafletMapContainer = ({locations, showLocation }) => {
+const LeafletMap = ({locations, showLocation }) => {
 
     const handleButtonClick = (event) => {
         showLocation(event.target.value)
@@ -35,7 +35,7 @@ const LeafletMapContainer = ({locations, showLocation }) => {
             </MapContainer>
     )
 }
-export default LeafletMapContainer;
+export default LeafletMap;
 
 
        

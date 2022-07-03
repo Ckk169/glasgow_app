@@ -7,7 +7,7 @@ const LocationService = {
         .then(res => res.json());
     },
 
-    showLocation (id){
+    showSelectedLocation(id){
         return fetch(baseURL + id)
         .then(res => res.json());
 

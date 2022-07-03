@@ -7,22 +7,17 @@ import '../App.css';
 
 const LocationContainer = () => {
 
-
     const [locations, setLocations] = useState([]);
     const [selectedLocation, setSelectedLocation] = useState(null);
 
     useEffect(() => {
         LocationService.getLocations()
             .then(locations => setLocations(locations))
-
     }, [])
 
-
-
     const showLocation = (locationId) => {
-
-        LocationService.showLocation(locationId)
-            .then(location => setSelectedLocation(location))
+    LocationService.showSelectedLocation(locationId)
+    .then(location => setSelectedLocation(location))
 
     }
 
