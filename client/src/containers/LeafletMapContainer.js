@@ -1,6 +1,5 @@
 import React from 'react';
-import LocationContainer from './LocationContainer';
-import { MapContainer, TileLayer, Marker, Popup, useMapEvents, setPosition } from 'react-leaflet'
+import { MapContainer, TileLayer, Marker, Popup} from 'react-leaflet';
 import '../App.css';
 
 
@@ -13,11 +12,9 @@ const LeafletMapContainer = ({locations, showLocation }) => {
       
     }
 
-
-
     return (
-
-        <div id='Map' style={{ height: '50%', width: '50%' }}>
+      
+       <div id='Map' style={{ height: '50%', width: '50%' }}>
 
             <MapContainer
                 locations ={locations}
@@ -47,22 +44,15 @@ const LeafletMapContainer = ({locations, showLocation }) => {
 
                 })}
                
-
-            
-            
-              
-
-
-
-
-
-
-
             </MapContainer>
 
-        </div>
+
+
+
 
     )
 }
-
 export default LeafletMapContainer;
+
+
+       

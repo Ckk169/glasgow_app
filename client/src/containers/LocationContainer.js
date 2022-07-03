@@ -7,27 +7,20 @@ import '../App.css';
 
 const LocationContainer = () => {
 
+
     const [locations, setLocations] = useState([]);
+    
 
     const [selectedLocation, setSelectedLocation] = useState(null);
 
     useEffect(() => {
         LocationService.getLocations()
         .then(locations => setLocations(locations))
-
-      
+ 
     }, [])
 
 
-    // // this is to be passed to the map component
-    // const handleSelectLocation = (location) => {
-    //     const selectedIndex = location;
-    //     const selectedLocation = locations[selectedIndex]
-
-    //     setSelectedLocation(selectedLocation)
-
-    // };
-
+  
     const showLocation = (locationId) => {
     
     LocationService.showLocation(locationId)
@@ -41,9 +34,13 @@ const LocationContainer = () => {
 
     return (
         <>
+
             <LeafletMapContainer locations= {locations} showLocation = {showLocation} />
             {selectedLocation ? <LocationDetail location={selectedLocation} /> : null}
-        </>
+    
+    </>
+    
+
     )
 
 }
