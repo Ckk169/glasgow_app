@@ -5,15 +5,16 @@ import LocationService from '../services/LocationService';
 import '../App.css';
 
 
-const LocationContainer = () => {
+const LocationContainer = ({locations}) => {
 
-    const [locations, setLocations] = useState([]);
+    // const [locations, setLocations] = useState([]);
     const [selectedLocation, setSelectedLocation] = useState(null);
+console.log(locations)
 
-    useEffect(() => {
-        LocationService.getLocations()
-            .then(locations => setLocations(locations))
-    }, [])
+    // useEffect(() => {
+    //     LocationService.getLocations()
+    //         .then(locations => setLocations(locations))
+    // }, [])
 
     const showLocation = (locationId) => {
     LocationService.showSelectedLocation(locationId)

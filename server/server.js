@@ -19,7 +19,7 @@ MongoClient.connect('mongodb://127.0.0.1:27017', { useUnifiedTopology: true })
         const quizCollection = db.collection('quiz');
         const quizRouter = createRouter(quizCollection);
         app.use('/api/locations', locationsRouter)
-        app.use('/api/quiz', locationsRouter)
+        app.use('/api/quiz', quizRouter)
     })
     .catch(console.error);
 
