@@ -59,10 +59,11 @@ const QuizContainer = () => {
     }
 
     //this handles selecting an answer and updating the users' score
+    //this is also not working
 
-    const updateScore = (answer) => {
+    const handleUpdateScore = (answer) => {
 
-        if (answer == true){
+        if (answer === true){
             setScore(score + 1)
         } 
         
@@ -75,7 +76,7 @@ const QuizContainer = () => {
     return(
         <>
         {showScore ? (<h1> You scored {score} out of {questions.length}</h1>):
-        <QuizQuestion currentQuestion={currentQuestion} questions={questions} handleNextButtonClick= {handleNextButtonClick} updateScore={updateScore}/>}
+        <QuizQuestion currentQuestion={currentQuestion} questions={questions} handleNextButtonClick= {handleNextButtonClick} handleUpdateScore={handleUpdateScore}/>}
 
         </>
 

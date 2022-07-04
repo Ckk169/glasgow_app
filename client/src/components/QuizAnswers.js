@@ -1,8 +1,8 @@
 
-const QuizAnswer = ({answers, updateScore}) => {
+const QuizAnswer = ({answers, handleUpdateScore}) => {
 
     const onAnswerClick = (value) => {
-        updateScore(value)
+        handleUpdateScore(value)
        
       
     }
