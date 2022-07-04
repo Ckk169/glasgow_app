@@ -2,20 +2,13 @@ import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup} from 'react-leaflet';
 import '../App.css';
 
-
-
-const LeafletMapContainer = ({locations, showLocation }) => {
+const LeafletMap = ({locations, showLocation }) => {
 
     const handleButtonClick = (event) => {
-
         showLocation(event.target.value)
-      
     }
 
     return (
-      
-       <div id='Map' style={{ height: '50%', width: '50%' }}>
-
             <MapContainer
                 locations ={locations}
                 showLocation ={showLocation}
@@ -27,7 +20,6 @@ const LeafletMapContainer = ({locations, showLocation }) => {
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
-
                 {locations.map((location)=>{
 
                     return(
@@ -37,24 +29,13 @@ const LeafletMapContainer = ({locations, showLocation }) => {
                         <Popup location={location}>
                         <button onClick={handleButtonClick} value={location._id}>{location.name}</button>
                         </Popup>
-                         
                         </Marker>
-
                     )
-
                 })}
-               
             </MapContainer>
-
-            </div>
-
-
-
-
-
     )
 }
-export default LeafletMapContainer;
+export default LeafletMap;
 
 
        
