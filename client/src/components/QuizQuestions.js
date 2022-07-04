@@ -4,12 +4,9 @@ const QuizQuestion = ({ currentQuestion, questions, handleNextButtonClick, handl
 
     const onButtonClick = (event) => {
         handleNextButtonClick(event.target.value)
-
-
     }
-
-
-
+    
+    
     return (
         <div>
             <span>Question {questions[currentQuestion].number}/{questions.length}</span>

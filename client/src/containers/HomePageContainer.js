@@ -20,10 +20,6 @@ const HomePageContainer = () => {
 
 
     return (
-        //will be adding 3 buttons(or our own icon) to link with Map, Quiz ,Funfact
-        //or use useNavigate (Still to figure!)
-        // homepage linked to map page now by using useNavigate().
-        // button will be changed to a img.Can revisit when css the FUCK out of this later.
         <>
 
             <button onClick={handleMapClick}>Map</button>
