@@ -1,8 +1,10 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LocationContainer from './containers/LocationContainer';
+import QuizContainer from './containers/QuizContainer';
 import HomePageContainer from './containers/HomePageContainer';
 import NavBar from './components/NavBar';
+
 
 function App() {
 
@@ -27,6 +29,7 @@ function App() {
     </Router>
 
   );
+
 }
 
 export default App;
