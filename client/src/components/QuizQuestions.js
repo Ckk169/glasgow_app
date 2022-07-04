@@ -8,13 +8,6 @@ const QuizQuestion = ({currentQuestion, questions, handleNextButtonClick, handle
       
     }
 
-    // const thisQuestion = currentQuestion;
-
-    // let nextQuestion = thisQuestion + 1;
-    
-
-    console.log(currentQuestion.number)
-
     return (
         <div>
              <span>Question {questions[currentQuestion].number}/{questions.length}</span>

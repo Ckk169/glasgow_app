@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import QuizQuestion from "../components/QuizQuestions";
+import QuizService from '../services/QuizService';
 
 
 const QuizContainer = () => {
@@ -10,63 +11,19 @@ const QuizContainer = () => {
 
     const [score, setScore] = useState(0)
 
-    const [questions, setQuestions] = useState([
-        {
-            question: "who's the daddy?",
-            number: 1,
-            answers: [
-                {
-                    option: "Ken",
-                    value: "true"
-                },
-
-                {
-                    option: "Simona",
-                    value: "false"
-                },
-
-                {
-                    option: "Chris",
-                    value: "false"
-                },
-
-                {
-                    option: "Bob",
-                    value: "false"
-                }
+    const [questions, setQuestions] = useState([]);
 
 
-            ]
-        },
+    // deleted dummy data , now adding in useEffect to seed with db.
+    useEffect(() => {
+        QuizService.getQuestions()
+            .then(questions => setQuestions(questions))
+    }, [])
 
-        {
-            question: "Who's got the best app?",
-            number: 2,
-            answers: [
-                {
-                    option: "Team Optimism",
-                    value: "false"
-                },
-
-                {
-                    option: "Team Patience",
-                    value: "true"
-                },
-
-                {
-                    option: "Team Confidence",
-                    value: "false"
-                },
-
-                {
-                    option: "Team Inspiration",
-                    value: "false"
-                }
-
-
-            ]
-        }
-    ])
+    const showSelectedQuestion = (questionId) => {
+        QuizService.showSelectedQuestion(questionId)
+            .then(question => setQuestions(question))
+    }
 
     //this handles the next question button change
     const handleNextButtonClick = (question) => {
@@ -92,8 +49,12 @@ const QuizContainer = () => {
 
     return (
         <>
+
             {showScore ? (<h1> You scored {score} out of {questions.length}</h1>) :
-                <QuizQuestion currentQuestion={currentQuestion} questions={questions} handleNextButtonClick={handleNextButtonClick} handleUpdateScore={handleUpdateScore} />}
+                <QuizQuestion currentQuestion={currentQuestion}
+                    questions={questions}
+                    handleNextButtonClick={handleNextButtonClick}
+                    handleUpdateScore={handleUpdateScore} />}
 
         </>
 
