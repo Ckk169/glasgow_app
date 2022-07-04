@@ -44,10 +44,6 @@ db.locations.insertMany([
             markerTitle: "This is the marker title",
             locationDetail: "Get Steaming!"
         },
-<<<<<<< HEAD
-        info: "Botanics text goes here"
-        
-=======
         info: "Since 1842, Glasgow botanic gardens has showcased flora from around the globe. Did you know that it used to be serviced by its own train station? Opened in 1896 with station buildings at ground level, steam trains passed under the gardens' entrance making their way from the long-gone Kirklee Station to Kelvin Bridge Station in tunnel running under Great Western Road. The station closed in 1964 and the beautiful ticket office was desteroyed by fire in 1970. However, if you visit the Botanic gardens and find the station ventilations shafts near the entrance, the old station platforms are there to see, painting a picture of the bygone steam era.",
         photo: {
             past: "https://www.theglasgowstory.com/images/TGSA01240_m.jpg",
@@ -69,7 +65,6 @@ db.locations.insertMany([
             past: "https://i.dailymail.co.uk/1s/2021/06/18/11/44382817-0-image-a-24_1624013549174.jpg",
             present: "https://cimages1.touristlink.com/repository/WE/ST/OF/SC/OT/LA/N/hamilton-crescent-west-_of-_-scotland-cricket-grou.jpg"
         }
->>>>>>> develop
     },
     {
         name: "Gallery of Modern Art",
