@@ -4,8 +4,10 @@ import QuizQuestion from "../components/QuizQuestions";
 
 const QuizContainer = () => {
 
+
     const [questions, setQuestions] = useState([
         {question: "who's the daddy?",
+        number: 1,
         answers: [
             {option: "Ken",
             value: "true"},
@@ -23,6 +25,7 @@ const QuizContainer = () => {
         ]},
 
         {question: "Who's got the best app?",
+        number: 2,
         answers: [
             {option: "Team Optimism",
             value: "false"},
@@ -58,19 +61,18 @@ const QuizContainer = () => {
       
     }
 
-    //this handles selecting an answer and updating the users' score
-    //this is also not working
+ //this updates the running score of the quiz to be rendered at the end
 
     const handleUpdateScore = (answer) => {
 
-        if (answer === true){
+        if (answer === "true"){
+            
             setScore(score + 1)
         } 
         
       
     }
-    
-    console.log("i am the score:", score)
+
 
 
     return(

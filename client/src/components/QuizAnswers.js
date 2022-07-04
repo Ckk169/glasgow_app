@@ -1,8 +1,9 @@
 
 const QuizAnswer = ({answers, handleUpdateScore}) => {
 
-    const onAnswerClick = (value) => {
-        handleUpdateScore(value)
+    const onAnswerClick = (event) => {
+        handleUpdateScore(event.target.value)
+        console.log('I am the answer value', event.target)
        
       
     }
@@ -12,7 +13,7 @@ const QuizAnswer = ({answers, handleUpdateScore}) => {
     
         return(
             <>
-                <button onClick={()=>onAnswerClick(answer.value)} key={index} value ={answer.value}>{answer.option}</button>
+                <button onClick={onAnswerClick} key={index} value ={answer.value}>{answer.option}</button>
                
             </>
         )

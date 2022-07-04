@@ -8,20 +8,20 @@ const QuizQuestion = ({currentQuestion, questions, handleNextButtonClick, handle
       
     }
 
-    const thisQuestion = currentQuestion;
+    // const thisQuestion = currentQuestion;
 
-    let nextQuestion = thisQuestion + 1;
+    // let nextQuestion = thisQuestion + 1;
     
 
-    
+    console.log(currentQuestion.number)
 
     return (
         <div>
-             <span>Question {nextQuestion}/{questions.length}</span>
+             <span>Question {questions[currentQuestion].number}/{questions.length}</span>
              
              <h3>{questions[currentQuestion].question}</h3>
              <QuizAnswer key={questions[currentQuestion]} answers={questions[currentQuestion].answers} handleUpdateScore={handleUpdateScore} />
-             <button onClick={onButtonClick} value={nextQuestion}>Next Question</button>
+             <button onClick={onButtonClick} value={currentQuestion + 1}>Next Question</button>
 
              
             
