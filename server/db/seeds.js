@@ -87,29 +87,92 @@ db.locations.insertMany([
 db.quiz.insertMany([
     {
         question: "What does scunnered mean?",
-        answer: "Tired",
-        options: ["Stupid", "Refreshed", "Tired"]
+        answers: [
+            {
+                option: "Stupid",
+                value: "false"
+            },
+            {
+                option: "Tired",
+                value: "true"
+            },
+            {
+                option: "Refreshed",
+                value: "false"
+            }
+        ]
     },
+
     {
         question: "If you winched someone, what did you do?",
-        answer: "Kissed them",
-        options: ["Punched them", "Kissed them", "Waved to them"]
+        answers: [
+            {
+                option: "Punched them",
+                value: "false"
+            },
+            {
+                option: "Waved to them",
+                value: "false"
+            },
+            {
+                option: "Kissed them",
+                value: "true"
+            }
+        ]
     },
+
     {
         question: "A bottle of ginger is...",
-        answer: "A fizzy drink",
-        options: ["A medicine", "A cooking ingredient", "A fizzy drink"]
+        answers: [
+            {
+                option: "A medicine",
+                value: "false"
+            },
+            {
+                option: "A cooking ingredient",
+                value: "false"
+            },
+            {
+                option: "A fizzy drink",
+                value: "true"
+            }
+        ]
     },
-    {
-        question: "If you forgot your peices, you'd have forgotten your...",
-        answer: "Sandwiches",
-        options: ["Sandwiches", "Books", "Money"]
 
+    {
+        question: "If you forgot your pieces, you'd have forgotten your...",
+        answers: [
+            {
+                option: "Sandwiches",
+                value: "true"
+            },
+            {
+                option: "Books",
+                value: "false"
+            },
+            {
+                option: "Money",
+                value: "false"
+            }
+        ]
     },
-    {
-        question: "If you called someone a rocket, they are a...",
-        answer: "Annoying person",
-        options: ["Fast Runner", "Tall Person", "Annoying person"]
 
+    {
+        question: "If you called someone a rocket, they are...",
+        answers: [
+            {
+                option: "a fast runner",
+                value: "false"
+            },
+            {
+                option: "a tall person",
+                value: "false"
+            },
+            {
+                option: "an annoying person",
+                value: "true"
+            }
+        ]
     }
+
 ]);
