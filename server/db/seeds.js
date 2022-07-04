@@ -88,3 +88,33 @@ db.locations.insertMany([
         }
     },
 ]);
+
+db.quiz.insertMany([
+    {
+        question: "What does scunnered mean?",
+        answer: "Tired",
+        options: ["Stupid", "Refreshed", "Tired"]
+    },
+    {
+        question: "If you winched someone, what did you do?",
+        answer: "Kissed them",
+        options: ["Punched them", "Kissed them", "Waved to them"]
+    },
+    {
+        question: "A bottle of ginger is...",
+        answer: "A fizzy drink",
+        options: ["A medicine", "A cooking ingredient", "A fizzy drink"]
+    },
+    {
+        question: "If you forgot your peices, you'd have forgotten your...",
+        answer: "Sandwiches",
+        options: ["Sandwiches", "Books", "Money"]
+
+    },
+    {
+        question: "If you called someone a rocket, they are a...",
+        answer: "Annoying person",
+        options: ["Fast Runner", "Tall Person", "Annoying person"]
+
+    }
+]);
