@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import QuizQuestion from "../components/QuizQuestions";
-import QuizService from '../services/QuizService';
 
 
-const QuizContainer = () => {
+
+const QuizContainer = ({questions}) => {
 
     const [showScore, setShowScore] = useState(false)
 
@@ -11,19 +11,7 @@ const QuizContainer = () => {
 
     const [score, setScore] = useState(0)
 
-    const [questions, setQuestions] = useState([]);
-
-
-    // deleted dummy data , now adding in useEffect to seed with db.
-    useEffect(() => {
-        QuizService.getQuestions()
-            .then(questions => setQuestions(questions))
-    }, [])
-
-    const showSelectedQuestion = (questionId) => {
-        QuizService.showSelectedQuestion(questionId)
-            .then(question => setQuestions(question))
-    }
+    
 
     //this handles the next question button change
     const handleNextButtonClick = (question) => {
@@ -45,7 +33,11 @@ const QuizContainer = () => {
             setScore(score + 1)
         }
 
+      
+
     }
+
+    console.log('Im the current question', currentQuestion)
 
     return (
         <>

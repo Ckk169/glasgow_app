@@ -4,26 +4,42 @@ import LocationContainer from './containers/LocationContainer';
 import QuizContainer from './containers/QuizContainer';
 import HomePageContainer from './containers/HomePageContainer';
 import NavBar from './components/NavBar';
+import {useState, useEffect} from 'react';
+import LocationService from './services/LocationService';
+import QuizService from './services/QuizService';
 
 
 function App() {
 
+  const [locations, setLocations] = useState([]);
+  const [questions, setQuestions] = useState([]);
+
+  //checking locations and questions render
+// console.log('im the locations', locations);
+// console.log('im the questions list', questions)
+
+
+  useEffect(() => {
+    LocationService.getLocations()
+        .then(locations => setLocations(locations))
+
+        
+    QuizService.getQuestions()
+    .then(data => setQuestions(data))
+},
+
+ [])
+
+
   return (
 
-    // <>
-    //   <HomePageContainer />
-    // </>
-
-    // <div className='App'>
-    //   <h1>Hidden Glasgow</h1>
-    // </div>
 
     <Router>
       <NavBar />
       <Routes>
         <Route exact path='/' element={<HomePageContainer />} />
-        <Route path='/map' element={<LocationContainer />} />
-        <Route path='/quiz' element={<QuizContainer />} />
+        <Route path='/map' element={<LocationContainer locations={locations} />} />
+        <Route path='/quiz' element={<QuizContainer questions={questions} />} />
         <Route path='*' element={<h1>Page Not Found</h1>} />
       </Routes>
     </Router>
