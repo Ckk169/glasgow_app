@@ -3,7 +3,7 @@ const QuizAnswer = ({answers, handleUpdateScore}) => {
 
     const onAnswerClick = (event) => {
         handleUpdateScore(event.target.value)
-        console.log('I am the answer value', event.target)
+    
        
       
     }

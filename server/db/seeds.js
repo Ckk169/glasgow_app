@@ -86,6 +86,7 @@ db.locations.insertMany([
 
 db.quiz.insertMany([
     {
+        number: 1,
         question: "What does scunnered mean?",
         answers: [
             {
@@ -104,6 +105,7 @@ db.quiz.insertMany([
     },
 
     {
+        number: 2,
         question: "If you winched someone, what did you do?",
         answers: [
             {
@@ -122,6 +124,7 @@ db.quiz.insertMany([
     },
 
     {
+        number: 3,
         question: "A bottle of ginger is...",
         answers: [
             {
@@ -140,6 +143,7 @@ db.quiz.insertMany([
     },
 
     {
+        number: 4,
         question: "If you forgot your pieces, you'd have forgotten your...",
         answers: [
             {
@@ -158,6 +162,7 @@ db.quiz.insertMany([
     },
 
     {
+        number: 5,
         question: "If you called someone a rocket, they are...",
         answers: [
             {
