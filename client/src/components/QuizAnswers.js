@@ -1,31 +1,32 @@
 
-const QuizAnswer = ({answers, handleUpdateScore}) => {
+const QuizAnswer = ({ answers, handleUpdateScore }) => {
 
     const onAnswerClick = (event) => {
         handleUpdateScore(event.target.value)
-    
-       
-      
+
+
+
     }
 
     const answerNodes = answers.map((answer, index) => {
 
-    
-        return(
+
+        return (
             <>
-                <button onClick={onAnswerClick} key={index} value ={answer.value}>{answer.option}</button>
-               
+                <div className="answer-button">
+                    <button onClick={onAnswerClick} key={index} value={answer.value}>{answer.option}</button>
+                </div>
             </>
         )
 
-      
+
     })
 
-    return(
+    return (
         <div>
             {answerNodes}
         </div>
     )
-  
+
 }
 export default QuizAnswer;
