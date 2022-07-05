@@ -1,9 +1,9 @@
-import { useState} from "react";
+import { useState } from "react";
 import QuizQuestion from "../components/QuizQuestions";
 
 
 
-const QuizContainer = ({questions}) => {
+const QuizContainer = ({ questions }) => {
 
     const [showScore, setShowScore] = useState(false)
 
@@ -11,7 +11,7 @@ const QuizContainer = ({questions}) => {
 
     const [score, setScore] = useState(0)
 
-    
+
 
     //this handles the next question button change
     const handleNextButtonClick = (question) => {
@@ -33,7 +33,7 @@ const QuizContainer = ({questions}) => {
             setScore(score + 1)
         }
 
-      
+
 
     }
 
@@ -41,13 +41,13 @@ const QuizContainer = ({questions}) => {
 
     return (
         <>
-
-            {showScore ? (<h1> You scored {score} out of {questions.length}</h1>) :
-                <QuizQuestion currentQuestion={currentQuestion}
-                    questions={questions}
-                    handleNextButtonClick={handleNextButtonClick}
-                    handleUpdateScore={handleUpdateScore} />}
-
+            <div className="score-section">
+                {showScore ? (<h1> You scored {score} out of {questions.length}</h1>) :
+                    <QuizQuestion currentQuestion={currentQuestion}
+                        questions={questions}
+                        handleNextButtonClick={handleNextButtonClick}
+                        handleUpdateScore={handleUpdateScore} />}
+            </div>
         </>
 
     )

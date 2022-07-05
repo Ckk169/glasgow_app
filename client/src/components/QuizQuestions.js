@@ -12,7 +12,7 @@ const QuizQuestion = ({ currentQuestion, questions, handleNextButtonClick, handl
 
     
     return (
-        <div>
+        <div className="question-section">
             <span>Question {questions[currentQuestion].number}/{questions.length}</span>
 
             <h3>{questions[currentQuestion].question}</h3>

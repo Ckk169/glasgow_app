@@ -7,6 +7,7 @@ import NavBar from './components/NavBar';
 import {useState, useEffect} from 'react';
 import LocationService from './services/LocationService';
 import QuizService from './services/QuizService';
+import Header from './components/Header';
 
 
 function App() {
@@ -33,6 +34,8 @@ function App() {
 
   return (
 
+    <>
+    <Header/>
 
     <Router>
       <NavBar />
@@ -43,7 +46,7 @@ function App() {
         <Route path='*' element={<h1>Page Not Found</h1>} />
       </Routes>
     </Router>
-
+</>
   );
 
 }

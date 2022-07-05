@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from './Header';
 import { MapContainer, TileLayer, Marker, Popup} from 'react-leaflet';
 import '../App.css';
 
@@ -9,6 +10,8 @@ const LeafletMap = ({locations, showLocation }) => {
     }
 
     return (
+        <>
+        <div className='map'>
             <MapContainer
                 locations ={locations}
                 showLocation ={showLocation}
@@ -33,6 +36,8 @@ const LeafletMap = ({locations, showLocation }) => {
                     )
                 })}
             </MapContainer>
+            </div>
+            </>
     )
 }
 export default LeafletMap;
