@@ -52,16 +52,18 @@ const QuizContainer = ({ questions }) => {
     return (
         <>
             <div className="quiz-container">
-                {startGame ? null: <button onClick={handleStartGame}>Start Game</button>}
+                <div className="question-section">
+                {startGame ? null: <button className="start" onClick={handleStartGame}>Start Game</button>}
                 {startGame ? 
                 <>
-                {showScore ? (<h1> You scored {score} out of {questions.length}</h1>) :
+                {showScore ? (<h1 className="score"> You scored {score} out of {questions.length}</h1>) :
                     <QuizQuestion currentQuestion={currentQuestion}
                         questions={questions}
                         handleNextButtonClick={handleNextButtonClick}
                         handleUpdateScore={handleUpdateScore} />}
                 </> : null
                 }
+                </div>
             </div>
         </>
 

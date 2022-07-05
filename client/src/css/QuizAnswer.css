@@ -12,6 +12,8 @@
     margin-bottom: 10%;
     padding: 3%;
     text-align: center;
+    font-weight: bold;
+    font-size: 110%;
 
 }
 
@@ -21,21 +23,4 @@
 
 }
 
-/* this definitely works */
-.answer-button-true:focus {
-
-    background-color: green;
-
-}
-
-.answer-button-false:focus{
-    background-color: red;
-}
-
-
-
-/* this is where you left off */
-/* .clicked {
-    background-color: rgb(108, 37, 183);
-} */
 

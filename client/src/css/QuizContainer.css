@@ -1,14 +1,13 @@
 
 .quiz-container {
-    height: 100%;
+    margin:0 auto;
+    height: 70%;
+    width: 50%;
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    margin-right: 30%;
-    margin-left:30%;
-    margin-top: 10%;
-    padding: 5%;
+    padding: 10%;
    border: solid white;
    border-radius: 25px;
    background: linear-gradient(rgb(133, 221, 221),rgb(212, 241, 241));
@@ -16,6 +15,25 @@
 
 }
 
+.question-section {
+    margin: 0 auto;
+    height: 60%;
+    width:80%;
+
+}
+
+.start {
+    
+    margin: 0 auto;
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+}
 
 
+.score{
+    display:flex;
+    justify-content: center;
+    color: rgb(24, 13, 106)
+}
 

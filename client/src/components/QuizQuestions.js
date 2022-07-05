@@ -20,7 +20,7 @@ const QuizQuestion = ({ currentQuestion, questions, handleNextButtonClick, handl
     }
     
     return (
-        <div className="question-section">
+        <>
             <aside>Question {questions[currentQuestion].number}/{questions.length}</aside>
 
             <h3>{questions[currentQuestion].question}</h3>
@@ -28,7 +28,7 @@ const QuizQuestion = ({ currentQuestion, questions, handleNextButtonClick, handl
             <button onClick={onButtonClick} value={questions[currentQuestion].number}>Next Question</button>
 
 
-        </div>
+        </>
     )
 
 }
