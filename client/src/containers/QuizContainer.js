@@ -1,15 +1,20 @@
 import { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import QuizQuestion from "../components/QuizQuestions";
+import '../css/QuizContainer.css'
 
 
 
 const QuizContainer = ({ questions }) => {
+
+    const [startGame, setStartGame] = useState(false)
 
     const [showScore, setShowScore] = useState(false)
 
     const [currentQuestion, SetCurrentQuestion] = useState(0);
 
     const [score, setScore] = useState(0)
+    
 
 
 
@@ -37,16 +42,26 @@ const QuizContainer = ({ questions }) => {
 
     }
 
-    console.log('Im the current question', currentQuestion)
+    const handleStartGame = () => {
+        setStartGame(true)
+      
+    }
+
+
 
     return (
         <>
-            <div className="score-section">
+            <div className="quiz-container">
+                {startGame ? null: <button onClick={handleStartGame}>Start Game</button>}
+                {startGame ? 
+                <>
                 {showScore ? (<h1> You scored {score} out of {questions.length}</h1>) :
                     <QuizQuestion currentQuestion={currentQuestion}
                         questions={questions}
                         handleNextButtonClick={handleNextButtonClick}
                         handleUpdateScore={handleUpdateScore} />}
+                </> : null
+                }
             </div>
         </>
 

@@ -1,0 +1,21 @@
+
+.quiz-container {
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 30%;
+    margin-left:30%;
+    margin-top: 10%;
+    padding: 5%;
+   border: solid white;
+   border-radius: 25px;
+   background: linear-gradient(rgb(133, 221, 221),rgb(212, 241, 241));
+
+
+}
+
+
+
+
