@@ -3,7 +3,13 @@
     justify-content: center;
     flex-flow: row wrap;
     padding-top: 10%;
+    /* NEW */
+    background-image: url(../assets/images/glasgow_uni2.jpg);
+    background-size: cover;
+    height: 700px;
+    zoom: 70%;
 }
+
 
 .map-button button {
     display: flex;
@@ -19,8 +25,9 @@
     /* text-decoration: none; */
     border-radius: 25px;
     margin-right: 50px;
-    padding:10%;
+    padding: 10%;
 }
+
 .quiz-button button {
     display: flex;
     flex-direction: column-reverse;
@@ -35,8 +42,9 @@
     /* text-decoration: none; */
     border-radius: 25px;
     margin-left: 50px;
-    padding:10%;
+    padding: 10%;
 }
+
 .bbc-button button {
     display: flex;
     flex-direction: column-reverse;
@@ -51,7 +59,7 @@
     /* text-decoration: none; */
     border-radius: 25px;
     margin-left: 50px;
-    padding:10%;
+    padding: 10%;
 }
 
 .map-button:hover {
