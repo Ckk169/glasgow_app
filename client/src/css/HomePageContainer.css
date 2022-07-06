@@ -1,0 +1,79 @@
+.button-container {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    padding-top: 10%;
+    /* NEW */
+    background-image: url(../assets/images/glasgow_uni2.jpg);
+    background-size: cover;
+    height: 700px;
+    zoom: 70%;
+}
+
+
+.map-button button {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    transition-property: all;
+    transition: .5s ease-in;
+    padding: 20% ;
+    font-size: 50px;
+    border-radius: 25px;
+    margin-right: 50px;
+    
+}
+
+.quiz-button button {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    transition-property: all;
+    transition: .5% ease-in;
+    font-size: 50px;
+    border-radius: 25px;
+    margin-left: 50px;
+    padding: 20%;
+}
+
+.bbc-button button {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    transition-property: all;
+    transition: .5% ease-in;
+    padding: 10px 10px;
+    font-size: 70px;
+    background: linear-gradient(rgb(133, 221, 221), rgb(212, 241, 241));
+    /* text-decoration: none; */
+    border-radius: 25px;
+    margin-left: 50px;
+    padding: 10%;
+}
+
+.map-button:hover {
+    cursor: pointer;
+    transform: rotate(5deg);
+    transform: scale(1.1);
+
+}
+
+.quiz-button:hover {
+    cursor: pointer;
+    transform: rotate(5deg);
+    transform: scale(1.1);
+
+}
+
+.bbc-button:hover {
+    cursor: pointer;
+    transform: rotate(5deg);
+    transform: scale(1.1);
+
+}
