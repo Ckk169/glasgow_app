@@ -19,7 +19,9 @@ const QuizQuestion = ({ currentQuestion, questions, handleNextButtonClick, handl
             <QuizAnswer key={questions[currentQuestion]} answers={questions[currentQuestion].answers} handleUpdateScore={handleUpdateScore} />
             <button onClick={onButtonClick} value={questions[currentQuestion].number}>Next Question</button>
 
-{/* Was trying to make value on button to:
+{
+
+/* Was trying to make value on button to:
  currentQuestion + 1 but this was giving me issues with state.
 currentQuestion would go from 1 to 11.
 Still to understand why so cheated and used our number property instead  as logic is the same*/}

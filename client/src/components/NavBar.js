@@ -7,17 +7,12 @@ const NavBar = () => {
     return (
         <nav>
 
-            <ul>
-                <li>
-                    <Link to="/">Home</Link>
-                </li>
-                {/* <li>
-                    <Link to="/map">Map</Link>
-                </li>
-                <li>
-                    <Link to="/quiz">Quiz</Link> 
-                </li> */}
-            </ul>
+            
+                
+                    <Link to="/">Hidden Glasgow</Link>
+                
+                
+            
         </nav>
     )
 }
