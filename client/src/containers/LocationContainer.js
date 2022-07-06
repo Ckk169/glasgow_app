@@ -1,20 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, {useState } from 'react';
 import LocationDetail from '../components/LocationDetail';
 import LeafletMap from '../components/LeafletMap';
 import LocationService from '../services/LocationService';
-import '../App.css';
+import '../css/LocationContainer.css';
 
 
 const LocationContainer = ({locations}) => {
 
-    // const [locations, setLocations] = useState([]);
-    const [selectedLocation, setSelectedLocation] = useState(null);
+
+const [selectedLocation, setSelectedLocation] = useState(null);
 console.log(locations)
 
-    // useEffect(() => {
-    //     LocationService.getLocations()
-    //         .then(locations => setLocations(locations))
-    // }, [])
 
     const showLocation = (locationId) => {
     LocationService.showSelectedLocation(locationId)

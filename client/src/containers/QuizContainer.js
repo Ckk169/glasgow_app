@@ -1,15 +1,22 @@
 import { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import QuizQuestion from "../components/QuizQuestions";
+import '../css/QuizContainer.css'
 
 
 
 const QuizContainer = ({ questions }) => {
+
+    const [startGame, setStartGame] = useState(false)
 
     const [showScore, setShowScore] = useState(false)
 
     const [currentQuestion, SetCurrentQuestion] = useState(0);
 
     const [score, setScore] = useState(0)
+
+  
+    
 
 
 
@@ -24,8 +31,8 @@ const QuizContainer = ({ questions }) => {
 
     }
 
-    //this updates the running score of the quiz to be rendered at the end
 
+    //this updates the running score of the quiz to be rendered at the end
     const handleUpdateScore = (answer) => {
 
         if (answer === "true") {
@@ -33,20 +40,42 @@ const QuizContainer = ({ questions }) => {
             setScore(score + 1)
         }
 
-
-
     }
 
-    console.log('Im the current question', currentQuestion)
+    //this handles pressing the start button
+    const handleStartGame = () => {
+        setStartGame(true)
+      
+    }
+
 
     return (
         <>
-            <div className="score-section">
-                {showScore ? (<h1> You scored {score} out of {questions.length}</h1>) :
-                    <QuizQuestion currentQuestion={currentQuestion}
-                        questions={questions}
-                        handleNextButtonClick={handleNextButtonClick}
-                        handleUpdateScore={handleUpdateScore} />}
+            <div className="quiz-container">
+                <div className="question-section">
+                {/* this line shows the start button for the game if startGame is set to false */}
+                {startGame ? null: <button className="start" onClick={handleStartGame}>Start Quiz</button>}
+
+                {/* the following will render the quiz questions if startGame is set to true*/}
+                {startGame ? 
+                <>
+                    {/* this will only show the score page if the question index value is less than the quiz length */}
+                    {showScore ? (
+                                    <>
+                                    <h1 className="score"> {(score > 3) ? "Nae bad!": "Pure mince!"}</h1>
+                                    <h1 className="score">You scored {score}/ {questions.length}</h1>
+                                    </>
+                                )
+
+                                :
+
+                                <QuizQuestion currentQuestion={currentQuestion}
+                                questions={questions}
+                                handleNextButtonClick={handleNextButtonClick}
+                                handleUpdateScore={handleUpdateScore} />}
+                </> : null
+                }
+                </div>
             </div>
         </>
 
