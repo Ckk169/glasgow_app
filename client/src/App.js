@@ -16,21 +16,22 @@ function App() {
   const [locations, setLocations] = useState([]);
   const [questions, setQuestions] = useState([]);
 
-  //checking locations and questions render
-  // console.log('im the locations', locations);
-  // console.log('im the questions list', questions)
 
 
   useEffect(() => {
     LocationService.getLocations()
-      .then(locations => setLocations(locations))
+  .then(locations => setLocations(locations))
+  }, [])
+  
+  useEffect(() => {
+     QuizService.getQuestions()
+    .then(data => setQuestions(data))
+  }, [])
 
 
-    QuizService.getQuestions()
-      .then(data => setQuestions(data))
-  },
 
-    [])
+
+
 
 
   return (
