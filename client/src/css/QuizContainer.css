@@ -1,0 +1,45 @@
+
+.quiz-container {
+    margin:0 auto;
+    height: 70%;
+    width: 50%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+   border: solid white;
+   border-radius: 25px;
+   background: linear-gradient(rgb(133, 221, 221),rgb(212, 241, 241));
+
+
+}
+
+.question-section {
+    margin: 0 auto;
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.start {
+    
+    margin: 0 auto;
+    padding: 8%;
+    display: flex;
+    font-weight: bold;
+    font-size: 110%;
+    
+}
+
+
+.score{
+    display:flex;
+    justify-content: center;
+    color: rgb(24, 13, 106)
+}
+

@@ -1,12 +1,17 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import LocationContainer from './LocationContainer';
-import QuizContainer from './QuizContainer';
+import "../css/HomePageContainer.css"
+
+
+//1, find an icon for map and quiz from google chrome
+//2, import to assets/image
+//3, change on jsx
+//4, css
 
 
 const HomePageContainer = () => {
 
-
+    
     let navMap = useNavigate();
     function handleMapClick() {
         navMap('./map');
@@ -21,10 +26,19 @@ const HomePageContainer = () => {
 
     return (
         <>
+            <div className='home-page-nav'>
 
-            <button onClick={handleMapClick}>Map</button>
-            <button onClick={handleQuizClick}>Quiz</button>
+            
+            
+                <div className='map-button'>
+                    {/* <img className='map-icon' src={map} alt='glasgow-map' onClick={handleMapClick}/> */}
+                    <button onClick={handleMapClick}>Map</button>
+                </div>
 
+                <div className='quiz-button'>
+                    <button onClick={handleQuizClick}>Quiz</button>
+                </div>
+            </div>
         </>
     )
 

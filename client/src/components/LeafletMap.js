@@ -1,9 +1,8 @@
 import React from 'react';
+
 import Header from './Header';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import '../css/LocationDetail.css'
-
-// This is NEW
 import L from 'leaflet';
 
 const LeafletMap = ({ locations, showLocation }) => {
