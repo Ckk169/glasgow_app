@@ -24,9 +24,11 @@ const QuizQuestion = ({ currentQuestion, questions, handleNextButtonClick, handl
             <aside>Question {questions[currentQuestion].number}/{questions.length}</aside>
 
             <h3>{questions[currentQuestion].question}</h3>
+
             <QuizAnswer key={questions[currentQuestion]} answers={questions[currentQuestion].answers} handleUpdateScore={handleUpdateScore} handleSelect={handleSelect} clicked={clicked} />
             <button onClick={onButtonClick} value={questions[currentQuestion].number} class="material-symbols-outlined">arrow_forward</button>
     
+
 
         </>
     )
@@ -35,4 +37,3 @@ const QuizQuestion = ({ currentQuestion, questions, handleNextButtonClick, handl
 export default QuizQuestion;
 
 
-//you have a key issue to debug and figure out where it is coming from.
