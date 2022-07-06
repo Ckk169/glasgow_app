@@ -4,7 +4,7 @@ import '../css/LocationDetail.css'
 const LocationDetail = ({ location }) => {
 
     return (
-        <div className="location-container">
+        // <div className="location-container">
             <div className="location-detail">
 
                 <div id="cf">
@@ -21,7 +21,7 @@ const LocationDetail = ({ location }) => {
                 <p> {location.info}</p>
 
             </div >
-        </div>
+        // </div>
     )
 };
 export default LocationDetail;

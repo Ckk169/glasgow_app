@@ -19,13 +19,11 @@
     cursor: pointer;
     transition-property: all;
     transition: .5s ease-in;
-    padding: 10px 10px;
-    font-size: 70px;
-    background: linear-gradient(rgb(133, 221, 221), rgb(212, 241, 241));
-    /* text-decoration: none; */
+    padding: 20% ;
+    font-size: 50px;
     border-radius: 25px;
     margin-right: 50px;
-    padding: 10%;
+    
 }
 
 .quiz-button button {
@@ -36,13 +34,10 @@
     cursor: pointer;
     transition-property: all;
     transition: .5% ease-in;
-    padding: 10px 10px;
-    font-size: 70px;
-    background: linear-gradient(rgb(133, 221, 221), rgb(212, 241, 241));
-    /* text-decoration: none; */
+    font-size: 50px;
     border-radius: 25px;
     margin-left: 50px;
-    padding: 10%;
+    padding: 20%;
 }
 
 .bbc-button button {
