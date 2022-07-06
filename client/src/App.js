@@ -28,18 +28,18 @@ function App() {
 
 
   return (
+    <Router>
+      <div id='wrapper'>
+        <Header />
+      </div>
+      <Routes>
+        <Route path='/' element={<HomePageContainer />} />
+        <Route path='/map' element={<LocationContainer locations={locations} />} />
+        <Route path='/quiz' element={<QuizContainer questions={questions} />} />
+        <Route path='*' element={<h1>Page Not Found</h1>} />
+      </Routes>
+    </Router>
 
-    <>
-      <Router>
-        <Routes>
-          <Route path='/' element={<HomePageContainer />} />
-          <Route path='/map' element={<LocationContainer locations={locations} />} />
-          <Route path='/quiz' element={<QuizContainer questions={questions} />} />
-          <Route path='*' element={<h1>Page Not Found</h1>} />
-        </Routes>
-      </Router>
-
-    </>
   );
 
 }

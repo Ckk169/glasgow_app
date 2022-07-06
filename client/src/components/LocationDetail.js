@@ -14,6 +14,8 @@ const LocationDetail = ({ location }) => {
                 <br></br>
                 <br></br>
                 <br></br>
+                <br></br>
+                <br></br>
                 <h3>{location.name}</h3>
                 <h4>{location.title.locationDetail}</h4>
                 <p> {location.info}</p>

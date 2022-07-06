@@ -16,5 +16,10 @@ img {
   object-fit: contain;
 }
 
+#wrapper {
+  margin-left:auto;
+  margin-right:auto;
+  width:960px;
+}
 
 

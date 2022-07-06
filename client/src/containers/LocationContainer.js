@@ -18,7 +18,9 @@ const [selectedLocation, setSelectedLocation] = useState(null);
         <div className="location-container">
 
             <LeafletMap locations={locations} showLocation={showLocation} />
+            <div id='wrapper'>
             {selectedLocation ? <LocationDetail location={selectedLocation} /> : null}
+            </div>
 
         </div >
 

@@ -27,7 +27,6 @@ const HomePageContainer = () => {
 
     return (
         <>
-                <Header />
 
             <div className='button-container'>
 
