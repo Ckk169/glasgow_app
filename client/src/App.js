@@ -31,7 +31,6 @@ function App() {
 
     <>
       <Router>
-        <Header />
         <Routes>
           <Route path='/' element={<HomePageContainer />} />
           <Route path='/map' element={<LocationContainer locations={locations} />} />
