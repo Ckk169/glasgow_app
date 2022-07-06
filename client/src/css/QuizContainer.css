@@ -6,8 +6,8 @@
     display:flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    padding: 10%;
+    justify-content: center;
+    padding: 5%;
    border: solid white;
    border-radius: 25px;
    background: linear-gradient(rgb(133, 221, 221),rgb(212, 241, 241));
@@ -17,17 +17,23 @@
 
 .question-section {
     margin: 0 auto;
-    height: 60%;
-    width:80%;
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
 }
 
 .start {
     
     margin: 0 auto;
-    padding: 5%;
+    padding: 8%;
     display: flex;
-    justify-content: center;
+    font-weight: bold;
+    font-size: 110%;
+    
 }
 
 

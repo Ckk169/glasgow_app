@@ -25,8 +25,8 @@ const QuizQuestion = ({ currentQuestion, questions, handleNextButtonClick, handl
 
             <h3>{questions[currentQuestion].question}</h3>
             <QuizAnswer key={questions[currentQuestion]} answers={questions[currentQuestion].answers} handleUpdateScore={handleUpdateScore} handleSelect={handleSelect} clicked={clicked} />
-            <button onClick={onButtonClick} value={questions[currentQuestion].number}>Next Question</button>
-
+            <button onClick={onButtonClick} value={questions[currentQuestion].number} class="material-symbols-outlined">arrow_forward</button>
+    
 
         </>
     )
