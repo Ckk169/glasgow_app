@@ -26,10 +26,8 @@ const HomePageContainer = () => {
 
     return (
         <>
-            <div className='home-page-nav'>
+            <div className='button-container'>
 
-            
-            
                 <div className='map-button'>
                     {/* <img className='map-icon' src={map} alt='glasgow-map' onClick={handleMapClick}/> */}
                     <button onClick={handleMapClick}>Map</button>

@@ -1,42 +1,40 @@
-.home-page-nav {
+/* .button-container{
     border: solid white;
-    border-radius: 1000px;
-    /* background: linear-gradient(rgb(133, 221, 221), rgb(212, 241, 241)); */
     display: flex;
     align-items: center;
-    margin-top: 20px;
-    flex-direction: row;
-    padding: 15px 32px;
-
-
-}
+} */
 
 .map-button button {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
     cursor: pointer;
     transition-property: all;
     transition: .2s ease-in;
-    padding: 15px 32px;
-    font-size: 50px;
+    /* padding: 15px 32px; */
+    font-size: 70px;
     background: linear-gradient(rgb(133, 221, 221), rgb(212, 241, 241));
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 30%;
+    /* text-decoration: none; */
+    /* display: inline-block; */
+    border-radius: 15%;
 }
 
 .quiz-button button {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
     cursor: pointer;
     transition-property: all;
     transition: .2s ease-in;
-    padding: 15px 32px;
-    font-size: 50px;
+    /* padding: 15px 32px; */
+    font-size: 70px;
     background: linear-gradient(rgb(133, 221, 221), rgb(212, 241, 241));
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 30%;
+    /* text-decoration: none; */
+    /* display: inline-block; */
+    border-radius: 15%;
 }
 
-.map-button:hover {
-    /* background-color: #ddd; */
+/* .map-button:hover {
     cursor: pointer;
     transform: rotate(5deg);
     transform: scale(2);
@@ -48,4 +46,4 @@
     transform: rotate(5deg);
     transform: scale(2);
 
-}
+} */
