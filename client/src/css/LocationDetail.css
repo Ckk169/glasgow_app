@@ -39,6 +39,11 @@
     justify-content: center;
 }
 
+.location-detail>p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
 .map {
     border: 0px;
     border-style: solid;
