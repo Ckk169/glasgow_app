@@ -16,6 +16,7 @@
     justify-content: space-between;
 }
 
+/* new background colour added */
 .location-detail {
     display: flex;
     flex-direction: column;
@@ -23,7 +24,7 @@
     border: 0px;
     border-style: solid;
     border-radius: 5px;
-    background-color: rgb(240, 240, 240);
+    background: linear-gradient(rgb(133, 221, 221, .3), rgb(212, 241, 241, .3));
     color: rgb(24, 13, 106);
 }
 
@@ -50,6 +51,8 @@
     border-radius: 5px;
     background-color: rgb(240, 240, 240);
     height: 50%;
+    background: linear-gradient(rgb(133, 221, 221, .3), rgb(212, 241, 241, .3));
+
 }
 
 .map button {
