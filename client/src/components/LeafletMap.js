@@ -36,11 +36,14 @@ const LeafletMap = ({ locations, showLocation }) => {
 
                         // icon ={markerIcon} is NEW
                         return (
+                            
                             <Marker
                                 position={[location.gps.lat, location.gps.long]} key={location._id} icon={markerIcon} >
 
                                 <Popup location={location}>
-                                    <button onClick={handleButtonClick} value={location._id}>{location.name}</button>
+                                    <div className='glasgow-button'>
+                                    <button onClick={handleButtonClick} value={location._id}>{location.name} </button>
+                                    </div>
                                 </Popup>
                             </Marker>
                         )

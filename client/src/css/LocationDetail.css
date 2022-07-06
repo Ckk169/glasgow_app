@@ -49,6 +49,7 @@
     border-style: solid;
     border-radius: 5px;
     background-color: rgb(240, 240, 240);
+    height: 50%;
 }
 
 .map button {
@@ -56,7 +57,7 @@
     border-color: rgb(174, 174, 225);
     border-radius: 25px;
     color: rgb(24, 13, 106);
-    padding: 15px 32px;
+    padding: 20px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -83,3 +84,4 @@
 #cf img.top:hover {
     opacity: 0;
 }
+
